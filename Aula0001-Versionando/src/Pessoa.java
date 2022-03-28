@@ -9,12 +9,13 @@ public class Pessoa {
 	
 	private Date dataNascimento;
 	
-	
-	euhaiuehaieha
-	e8aheuoahoeuah
-	eah
-	eahe
-	ahe
+	/*
+	#euhaiuehaieha
+	#e8aheuoahoeuah
+	#eah
+	#eahe
+	#ahe
+	*/
 	
 	public Date getDataNascimento() {
 		return dataNascimento;
