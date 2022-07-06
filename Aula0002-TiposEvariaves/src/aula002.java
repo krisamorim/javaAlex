@@ -13,6 +13,10 @@ public class aula002 {
 		boolean tipoBoolean = true;
 		String tipoTexto = "texto";
 		
+		//tipo caracter
+		char sexo = 'F';
+		char pessoJuridica = 'J';
+		
 		//big decimal pe um classe por isso as variáveis desse tipo são criadas diferentes
 		BigDecimal big1 = new BigDecimal("0.1");
         BigDecimal big2 = new BigDecimal("0.2");
