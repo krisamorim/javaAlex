@@ -5,6 +5,7 @@ public class classePrincipal {
 		
 		Aluno aluno1 = new Aluno();
 		Aluno aluno2 = new Aluno();
+		Aluno aluno3 = new Aluno("Maria");
 
 	}
 
