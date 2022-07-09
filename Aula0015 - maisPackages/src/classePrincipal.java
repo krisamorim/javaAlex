@@ -1,8 +1,10 @@
+import pckAluno.Aluno;
 
 public class classePrincipal {
-
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		
+		Aluno aluno1 = new Aluno();
+		Aluno aluno2 = new Aluno();
 
 	}
 

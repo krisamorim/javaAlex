@@ -11,4 +11,13 @@ public class Aluno {
 	String dataMatricula;
 	String nomeEscola;
 	String serieMatriculada;
+	
+	//construtor que é quem cria os dados na memória, não precisa criar pois o java ja cria automaticamente
+	public Aluno() {
+		
+	}
+	
+	public Aluno(String nomePadrao) {
+		nome = nomePadrao;
+	}
 }
