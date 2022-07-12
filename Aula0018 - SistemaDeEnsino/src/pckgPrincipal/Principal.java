@@ -9,7 +9,7 @@ public class Principal {
 		Aluno aluno1 = new Aluno();
 		aluno1.setNome(JOptionPane.showInputDialog("Qual o nome do aluno 1?"));
 		aluno1.setCpf("123.123.123-00");
-		aluno1.setAnoNascimento(2004);
+		aluno1.setAnoNascimento(Integer.valueOf(JOptionPane.showInputDialog("Qual o ano que o aluno nasceu?")));
 		aluno1.setMae("Maria Silva");
 		aluno1.setPai("João Pereira Silva");
 		aluno1.setNota1(7);
