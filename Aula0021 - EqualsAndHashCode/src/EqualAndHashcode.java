@@ -1,5 +1,5 @@
 import java.util.Objects;
-
+import teacher.*;
 import javax.swing.JOptionPane;
 
 public class EqualAndHashcode {
@@ -102,16 +102,21 @@ public class EqualAndHashcode {
 		}
 		//end of Student class
 		
-		//instance student1 and 2 variables
+		//instance objects
 		Student student1 = new Student();
 		Student student2 = new Student();
+		Teacher teacher1 = new Teacher();
+		Teacher teacher2 = new Teacher();
 		
+		//check objects
 		Boolean checkEquals = student1.equals(student2);
+		Boolean checkEqualsTeacher = teacher1.equals(teacher2);
 		
 		//set the name of the first student
 		student1.setName("Anna");
 		//set the name of the second student
 		student2.setName("Anna");
+		//check the student's names
 		Boolean checkEqualsName = student1.name.equals(student2.name);
 		
 		//set the cpf of the first student
@@ -120,14 +125,34 @@ public class EqualAndHashcode {
 		student2.setCpf("123456788");
 		Boolean checkEqualsCPF = student1.cpf.equals(student2.cpf);
 		
+		//set the name of the first TEACHER
+		teacher1.setName("Elisa");
+		//set the name of the second TEACHER
+		teacher2.setName("Elisa");
+		//check the student's names
+		Boolean checkEqualsNameTeacher = teacher1.name.equals(teacher2.name);
+				
+		//set the cpf of the first TEACHER
+		teacher1.setCpf("111111111");
+		//set the cpf of the second TEACHER
+		teacher2.setCpf("111111111");
+		Boolean checkEqualsCPFtechaer = teacher1.cpf.equals(teacher2.cpf);
+		
 				
 		//show in the console
-		//the object comparing is false because java check the memory position. even if all the data were the same the result would be false
-		System.out.println("-----------------Comparing objects-----------------\nstudent1: "+student1+"\nstudent2: "+student2+"\nEquals: "+checkEquals);
+		//the object comparing is true because the hashCOde is implementing in the object
+		System.out.println("#Students (With hashCode):\n-----------------Comparing objects-----------------\nstudent1: "+student1+"\nstudent2: "+student2+"\nEquals: "+checkEquals);
 		
 		//the object comparing now is true because in the code below the NAME are comparing
 		System.out.println("\n-------------Comparing objects' names--------------\nstudent.name: "+student1.name+"\nstudent2.name: "+student2.name+"\nEquals: "+checkEqualsName);
+	
 		
+		//the object comparing is false because java check the memory position. even if all the data were the same the result would be false
+		System.out.println("\n#Teacher (WithOUT hashCode):\n-----------------Comparing objects-----------------\nteacher1: "+teacher1+"\nteacher2: "+teacher2+"\nEquals: "+checkEqualsTeacher);
+		
+		//the object comparing now is true because in the code below the NAME are comparing
+		System.out.println("\n-------------Comparing objects' names--------------\nteacher2.name: "+teacher1.name+"\nteacher2.name: "+teacher2.name+"\nEquals: "+checkEqualsNameTeacher);
+			
 	}
 
 }
