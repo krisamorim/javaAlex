@@ -1,9 +1,11 @@
+import java.util.Objects;
+
 import javax.swing.JOptionPane;
 
 public class EqualAndHashcode {
 
 	public static void main(String[] args) {
-		//beginning student class
+		//beginning student class - WITH hashCode
 		class Student{
 			String name, cpf;
 			int id;
@@ -79,6 +81,23 @@ public class EqualAndHashcode {
 						+ ", getStatus()=" + getStatus() + "]";
 			}
 			
+			//hashCode start at line 85 and ends at 99
+			@Override
+			public int hashCode() {
+				return Objects.hash(cpf);
+			}
+			@Override
+			public boolean equals(Object obj) {
+				if (this == obj)
+					return true;
+				if (obj == null)
+					return false;
+				if (getClass() != obj.getClass())
+					return false;
+				Student other = (Student) obj;
+				return Objects.equals(cpf, other.cpf);
+			}
+			//hashCod end
 			
 		}
 		//end of Student class
