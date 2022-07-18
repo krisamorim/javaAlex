@@ -25,7 +25,7 @@ public class Main {
 		for(int c=0; c<n.length; c++) {
 			System.out.println(n[c]);
 		}
-		*/
+		
 		
 		//putting in order
 		Arrays.sort(n);
@@ -33,7 +33,11 @@ public class Main {
 		for (int valores: n) {
 			System.out.println(valores);
 		}
+		*/
 		
+		
+		//search using binarySearch for the position of element 6 in the array n
+		System.out.println(Arrays.binarySearch(n, 6));
 	}
 
 }
