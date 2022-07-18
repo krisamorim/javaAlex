@@ -19,13 +19,21 @@ public class Main {
 		for (int valores: num) {
 			System.out.println(valores);
 		}
-		*/
+		
 		
 		//a way to print the elements of the an array
 		for(int c=0; c<n.length; c++) {
 			System.out.println(n[c]);
 		}
-								
+		*/
+		
+		//putting in order
+		Arrays.sort(n);
+		System.out.println("\nIn order:\n");
+		for (int valores: n) {
+			System.out.println(valores);
+		}
+		
 	}
 
 }
