@@ -9,6 +9,8 @@ public class Student {
 	String name, peopleRegister;
 	int id;
 	List<Discipline> disciplines = new ArrayList<Discipline>();
+	double average;
+	
 	public String getName() {
 		return name;
 	}
