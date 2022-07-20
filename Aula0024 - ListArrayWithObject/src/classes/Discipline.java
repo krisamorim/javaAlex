@@ -4,7 +4,7 @@ import java.util.Objects;
 
 public class Discipline {
 	double grade;
-	String discipline;
+	String nameDis;
 	public double getGrade() {
 		return grade;
 	}
@@ -12,14 +12,14 @@ public class Discipline {
 		this.grade = grade;
 	}
 	public String getDiscipline() {
-		return discipline;
+		return nameDis;
 	}
 	public void setDiscipline(String discipline) {
-		this.discipline = discipline;
+		this.nameDis = discipline;
 	}
 	@Override
 	public int hashCode() {
-		return Objects.hash(discipline, grade);
+		return Objects.hash(nameDis, grade);
 	}
 	@Override
 	public boolean equals(Object obj) {
@@ -30,12 +30,12 @@ public class Discipline {
 		if (getClass() != obj.getClass())
 			return false;
 		Discipline other = (Discipline) obj;
-		return Objects.equals(discipline, other.discipline)
+		return Objects.equals(nameDis, other.nameDis)
 				&& Double.doubleToLongBits(grade) == Double.doubleToLongBits(other.grade);
 	}
 	@Override
 	public String toString() {
-		return "Discipline [grade=" + grade + ", discipline=" + discipline + "]";
+		return "[discipline=" + nameDis + ", grade=" + grade + "]";
 	}
 	
 }
