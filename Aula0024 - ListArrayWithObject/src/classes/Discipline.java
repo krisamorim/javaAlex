@@ -3,13 +3,13 @@ package classes;
 import java.util.Objects;
 
 public class Discipline {
-	double nota;
+	double grade;
 	String discipline;
-	public double getNota() {
-		return nota;
+	public double getGrade() {
+		return grade;
 	}
-	public void setNota(double nota) {
-		this.nota = nota;
+	public void setGrade(double grade) {
+		this.grade = grade;
 	}
 	public String getDiscipline() {
 		return discipline;
@@ -19,7 +19,7 @@ public class Discipline {
 	}
 	@Override
 	public int hashCode() {
-		return Objects.hash(discipline, nota);
+		return Objects.hash(discipline, grade);
 	}
 	@Override
 	public boolean equals(Object obj) {
@@ -31,11 +31,11 @@ public class Discipline {
 			return false;
 		Discipline other = (Discipline) obj;
 		return Objects.equals(discipline, other.discipline)
-				&& Double.doubleToLongBits(nota) == Double.doubleToLongBits(other.nota);
+				&& Double.doubleToLongBits(grade) == Double.doubleToLongBits(other.grade);
 	}
 	@Override
 	public String toString() {
-		return "Discipline [nota=" + nota + ", discipline=" + discipline + "]";
+		return "Discipline [grade=" + grade + ", discipline=" + discipline + "]";
 	}
 	
 }
