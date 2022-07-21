@@ -47,6 +47,12 @@ public class SystemEducation {
 				Discipline other = (Discipline) obj;
 				return id == other.id && Objects.equals(nameDis, other.nameDis);
 			}
+			//toString
+			@Override
+			public String toString() {
+				return "[nameDis=" + nameDis + ", id=" + id + ", grade=" + grade + "]";
+			}
+			
 			
 		}
 
@@ -120,7 +126,42 @@ public class SystemEducation {
 		student1.setId(id);
 		student1.setIndividualRegistration(individualRegistration);
 		
+		String name1stDis = JOptionPane.showInputDialog("What's the name of the 1st discipline?");
+		double grade1stDisc = Double.parseDouble(JOptionPane.showInputDialog("What's the grade of the 1st discipline?"));
+		String name2ndDis = JOptionPane.showInputDialog("What's the name of the 2nd discipline?");
+		double grade2ndDisc = Double.parseDouble(JOptionPane.showInputDialog("What's the grade of the 2nd discipline?"));
 		
+		String name3rdDis = JOptionPane.showInputDialog("What's the name of the 3rd discipline?");
+		double grade3rdDisc = Double.parseDouble(JOptionPane.showInputDialog("What's the grade of the 3rd discipline?"));
+		String name4thDis = JOptionPane.showInputDialog("What's the name of the 4th discipline?");
+		double grade4thDisc = Double.parseDouble(JOptionPane.showInputDialog("What's the grade of the 4th discipline?"));
+		
+		Discipline discipline1 =new Discipline();
+		discipline1.setNameDis(name1stDis);
+		discipline1.setGrade(grade1stDisc);
+		
+		Discipline discipline2 =new Discipline();
+		discipline2.setNameDis(name2ndDis);
+		discipline2.setGrade(grade2ndDisc);
+		
+		Discipline discipline3 =new Discipline();
+		discipline3.setNameDis(name3rdDis);
+		discipline3.setGrade(grade3rdDisc);
+		
+		Discipline discipline4 =new Discipline();
+		discipline4.setNameDis(name4thDis);
+		discipline4.setGrade(grade4thDisc);
+		
+		//add discipline1 to array
+		student1.getDisciplines().add(discipline1);
+		//add discipline 2 to array
+		student1.getDisciplines().add(discipline2);
+		//add discipline3 to array
+		student1.getDisciplines().add(discipline3);
+		//add discipline4 to array
+		student1.getDisciplines().add(discipline4);
+		
+		System.out.println("student1:\n" + student1 + "\n--------------------------------------\n");
 	}
 
 }
