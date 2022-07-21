@@ -9,8 +9,9 @@ public class Student {
 	String name, peopleRegister;
 	int id;
 	List<Discipline> disciplines = new ArrayList<Discipline>();
-	double average;
 	
+	
+	//getters & setters
 	public String getName() {
 		return name;
 	}
@@ -35,6 +36,15 @@ public class Student {
 	public void setDisciplines(List<Discipline> disciplines) {
 		this.disciplines = disciplines;
 	}
+	public double getAverage() {
+		double sumGrade = 0;
+		for(Discipline discipline : disciplines) {
+			sumGrade += discipline.getGrade();
+		}
+		return sumGrade/disciplines.size();
+	}
+	
+	//hashCOde
 	@Override
 	public int hashCode() {
 		return Objects.hash(peopleRegister);
@@ -50,10 +60,11 @@ public class Student {
 		Student other = (Student) obj;
 		return Objects.equals(peopleRegister, other.peopleRegister);
 	}
+	
+	//to String
 	@Override
 	public String toString() {
-		return "Student [name=" + name + ", peopleRegister=" + peopleRegister + ", id=" + id + ", disciplines="
-				+ disciplines + "]";
+		return "Student [name=" + name + ", peopleRegister=" + peopleRegister + ", id=" + id + ", disciplines=" + disciplines + ", getAverage()="+ getAverage() + "]";
 	}
 	
 	
