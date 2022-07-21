@@ -11,6 +11,7 @@ public class SystemEducation {
 			String nameDis;
 			int id;
 			double grade;
+			
 			//setter & getters
 			public String getNameDis() {
 				return nameDis;
@@ -29,6 +30,22 @@ public class SystemEducation {
 			}
 			public void setGrade(double grade) {
 				this.grade = grade;
+			}
+			//hasCode & equals
+			@Override
+			public int hashCode() {
+				return Objects.hash(id, nameDis);
+			}
+			@Override
+			public boolean equals(Object obj) {
+				if (this == obj)
+					return true;
+				if (obj == null)
+					return false;
+				if (getClass() != obj.getClass())
+					return false;
+				Discipline other = (Discipline) obj;
+				return id == other.id && Objects.equals(nameDis, other.nameDis);
 			}
 			
 		}
