@@ -1,5 +1,4 @@
 package mainPckg;
-
 public class MainClass {
 
 	public static void main(String[] args) {
