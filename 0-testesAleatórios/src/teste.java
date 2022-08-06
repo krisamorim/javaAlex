@@ -1,19 +1,16 @@
+import pcoteTeste.*;
 
 public class teste {
-
 	public static void main(String[] args) {
-		String[] names = new String[3];
 		
-		names[1] = "kris";
-		names[2] = "Ana";
-		int c = 0;
-		
-		for (String name : names) {
-			System.out.println("[" + c + "]=" + name);
-			c++;
+		User[] usuarios = new User[10];
+		for(int i = 0; i < 10; i++) {
+			User actual = new User("Name"+i,"lastName"+i);
+			usuarios[i] = actual;
 		}
 		
-		System.out.println(names.length);
+		for(User valores: usuarios) {
+			System.out.println(valores);
+		}
 	}
-
 }
