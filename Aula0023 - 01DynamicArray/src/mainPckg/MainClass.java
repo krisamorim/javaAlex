@@ -9,7 +9,7 @@ public class MainClass {
 		//creating a new Array list called users
 		List<User> users = new ArrayList<>();
 
-		//for to creating 10 users' name like "Nome+number" and last name with "Sobrenone + number"  
+		//for to creating 10 users' name like "Nome+number" and last name with "Sobrenome + number"  
 		for(int i=0; i<10; i++) {
 			
 			//creating a new variable to receive the name
@@ -25,6 +25,14 @@ public class MainClass {
 		}
 		//print all users of the users variable, in a single print
 		System.out.println(users);
+		
+		//get the 1st element (in the position 0)
+		System.out.println(users.get(0));
+		
+		//get only the firstname of the element in the position 2
+		System.out.println(users.get(1).getFirstName());
+		
+		
 	}
 
 }
