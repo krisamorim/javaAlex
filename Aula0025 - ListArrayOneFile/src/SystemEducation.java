@@ -88,7 +88,7 @@ public class SystemEducation {
 			}
 			public double getAverage() {
 				double sumGrade = 0;
-				for(Discipline discipline : disciplines) {
+				for(Discipline discipline: disciplines) {
 					sumGrade += discipline.getGrade();
 				}
 				return sumGrade/disciplines.size();
@@ -118,37 +118,41 @@ public class SystemEducation {
 			
 		}
 		
+		//get the students' variables values
 		String name = JOptionPane.showInputDialog("What's the student's name?");
 		String individualRegistration = JOptionPane.showInputDialog("What's the student's individual registration?");
 		int id = Integer.parseInt(JOptionPane.showInputDialog("What's the student's ID?"));
+		
+		//putting the students' variables values inside objects
 		Student student1 = new Student();
 		student1.setNameStud(name);
 		student1.setId(id);
 		student1.setIndividualRegistration(individualRegistration);
 		
+		//get the discipline's variables values
 		String name1stDis = JOptionPane.showInputDialog("What's the name of the 1st discipline?");
 		double grade1stDisc = Double.parseDouble(JOptionPane.showInputDialog("What's the grade of the 1st discipline?"));
 		String name2ndDis = JOptionPane.showInputDialog("What's the name of the 2nd discipline?");
 		double grade2ndDisc = Double.parseDouble(JOptionPane.showInputDialog("What's the grade of the 2nd discipline?"));
-		
 		String name3rdDis = JOptionPane.showInputDialog("What's the name of the 3rd discipline?");
 		double grade3rdDisc = Double.parseDouble(JOptionPane.showInputDialog("What's the grade of the 3rd discipline?"));
 		String name4thDis = JOptionPane.showInputDialog("What's the name of the 4th discipline?");
 		double grade4thDisc = Double.parseDouble(JOptionPane.showInputDialog("What's the grade of the 4th discipline?"));
 		
-		Discipline discipline1 =new Discipline();
+		//putting the values of variables inside objects
+		Discipline discipline1 = new Discipline();
 		discipline1.setNameDis(name1stDis);
 		discipline1.setGrade(grade1stDisc);
 		
-		Discipline discipline2 =new Discipline();
+		Discipline discipline2 = new Discipline();
 		discipline2.setNameDis(name2ndDis);
 		discipline2.setGrade(grade2ndDisc);
 		
-		Discipline discipline3 =new Discipline();
+		Discipline discipline3 = new Discipline();
 		discipline3.setNameDis(name3rdDis);
 		discipline3.setGrade(grade3rdDisc);
 		
-		Discipline discipline4 =new Discipline();
+		Discipline discipline4 = new Discipline();
 		discipline4.setNameDis(name4thDis);
 		discipline4.setGrade(grade4thDisc);
 		
