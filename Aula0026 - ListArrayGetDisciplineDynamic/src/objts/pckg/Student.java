@@ -63,7 +63,7 @@ public class Student {
 	@Override
 	public String toString() {
 		return "Student [studentName=" + studentName + ", studentCPF=" + studentCPF + ", studentID=" + studentID
-				+ ", disciplines=" + disciplines + "]";
+				+ ", disciplines=" + disciplines + ", getAverage()=" +getAverage() + "]";
 	}
 	
 	

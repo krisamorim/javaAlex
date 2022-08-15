@@ -8,7 +8,7 @@ public class Discipline {
 	double disciplineGrade;
 	
 	
-	//Setters & Gatters
+	//Setters & Getters
 	public String getDisciplineName() {
 		return disciplineName;
 	}
