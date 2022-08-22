@@ -48,6 +48,6 @@ public class Exec {
 		//0015-Show the final result
 		JOptionPane.showMessageDialog(null, "The Student average was " + student1.getAverage() + "\n" + student1.getFinalResult());
 		
-		
+		System.out.println();
 	}
 }
