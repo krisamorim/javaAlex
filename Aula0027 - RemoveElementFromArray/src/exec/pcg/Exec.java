@@ -45,9 +45,50 @@ public class Exec {
 		//0014-show in the console the student data with the discipline data
 		System.out.println(student1);
 		
+		//0016-Ask to remove
+		int choise = JOptionPane.showConfirmDialog(null, "Want to remove some discipline?");
+		
+		//0017-
+		if (choise == 0) {
+			//0018-Creating variables 
+			String firstDiscipline = student1.getDisciplines().get(0).getName();
+			String secondDiscipline = student1.getDisciplines().get(1).getName();
+			String thirdDiscipline = student1.getDisciplines().get(2).getName();
+			String fourthDIscipline = student1.getDisciplines().get(3).getName();
+			
+			//0019
+			int disciplineChoise = Integer.parseInt(JOptionPane.showInputDialog("Wich on? Type:\n1 for " + firstDiscipline + "\n2 for " + secondDiscipline + "\n3 for " + thirdDiscipline + "\n4 for " + fourthDIscipline));
+			
+			//0020-Show list before
+			JOptionPane.showMessageDialog(null, "Discipline list before remove:\n" + student1.getDisciplines());
+			
+			//0021-Removing
+			student1.getDisciplines().remove(disciplineChoise-1);
+			
+			//0022-Show list before remove
+			JOptionPane.showMessageDialog(null, "Discipline list before remove:\n" + student1.getDisciplines());	
+		}
+		
+		//0023-Ask to add
+		int choiseAdd = JOptionPane.showConfirmDialog(null, "Want to add a new discipline?");
+		//0017-
+		if (choiseAdd == 0) {
+			//0018-Creating variables
+			Discipline addDiscipline = new Discipline();
+			//0019-Setting data in the object
+			addDiscipline.setName(JOptionPane.showInputDialog("What's the new discipline name?"));
+			addDiscipline.setGrade(Double.parseDouble(JOptionPane.showInputDialog("What is the new discipline grade?")));
+			
+			//0021-Adding
+			student1.getDisciplines().add(addDiscipline);
+			
+			//0021-Showing the discipline list
+			JOptionPane.showMessageDialog(null, "The list:\n" + student1.getDisciplines());
+			
+		}
+		
 		//0015-Show the final result
 		JOptionPane.showMessageDialog(null, "The Student average was " + student1.getAverage() + "\n" + student1.getFinalResult());
-		
-		System.out.println();
+			
 	}
 }
