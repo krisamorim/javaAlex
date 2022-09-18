@@ -1,5 +1,4 @@
 package obj.pkg;
-
 import java.util.Objects;
 
 public class Discipline {
