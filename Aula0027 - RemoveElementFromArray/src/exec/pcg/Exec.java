@@ -57,7 +57,7 @@ public class Exec {
 			String fourthDIscipline = student1.getDisciplines().get(3).getName();
 			
 			//0019
-			int disciplineChoise = Integer.parseInt(JOptionPane.showInputDialog("Wich on? Type:\n1 for " + firstDiscipline + "\n2 for " + secondDiscipline + "\n3 for " + thirdDiscipline + "\n4 for " + fourthDIscipline));
+			int disciplineChoise = Integer.parseInt(JOptionPane.showInputDialog("Wich one? Type:\n1 for " + firstDiscipline + "\n2 for " + secondDiscipline + "\n3 for " + thirdDiscipline + "\n4 for " + fourthDIscipline));
 			
 			//0020-Show list before
 			JOptionPane.showMessageDialog(null, "Discipline list before remove:\n" + student1.getDisciplines());
